@@ -28,7 +28,9 @@ async function getData() {
 
 function displayDataInLeaderboard(data) {
   const leaderboardContainer = document.getElementById('leaderboard-container')
-  leaderboardContainer.innerHTML = '<h2>Top 10</h2>'
+  const titleTop10 = document.createElement('h2')
+  titleTop10.innerHTML = 'Top 10'
+  leaderboardContainer.append(titleTop10)
   data.forEach((user) => {
     const userDiv = document.createElement('div')
     userDiv.innerText = `Nombre: ${user.username}, Tiempo: ${user.time}s`
