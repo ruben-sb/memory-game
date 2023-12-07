@@ -31,7 +31,7 @@ function displayDataInLeaderboard(data) {
   leaderboardContainer.innerHTML = '<h2>Top 10</h2>'
   data.forEach((user) => {
     const userDiv = document.createElement('div')
-    userDiv.innerText = `Nombre: ${user.username}, Tiempo: ${user.time}`
+    userDiv.innerText = `Nombre: ${user.username}, Tiempo: ${user.time}s`
     leaderboardContainer.appendChild(userDiv)
   })
 }
